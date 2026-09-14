@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[Tu Nombre] — Desarrollador Web Frontend</title>
+  <meta name="description" content="Portafolio profesional de [Tu Nombre], desarrollador web frontend.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="resources\styles.css">
+</head>
+<body>
+
+  <!-- ===== HEADER / NAV ===== -->
+  <header class="site-header" id="inicio">
+    <div class="header-inner">
+      <a href="#inicio" class="logo">
+        <span class="logo-mark">&lt;/&gt;</span>
+        <!-- TODO: reemplaza por tu nombre o marca personal -->
+        <span class="logo-text">Ken Aguirre</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="navMenu" aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href="#inicio" class="nav-link">Inicio</a></li>
+          <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
+          <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
+          <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+          <li><a href="#contacto" class="nav-link nav-link--cta">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="hero-inner">
+        <p class="hero-eyebrow">Portafolio · 2025</p>
+        <h1 class="hero-title">
+          Hola, soy <span class="hero-name">Ken Aguirre</span>.
+        </h1>
+        <p class="hero-role">
+          <!-- TODO: describe tu rol y especialidad -->
+          estudiante de desarrollo web, parte de la corte 2026 de "Jóvenes Creativos" donde he recorrido un camino de aprendizaje en el mundo del desarrollo web.
+        </p>
+        <div class="hero-actions">
+          <a href="#proyectos" class="btn btn--primary">Ver proyectos</a>
+          <a href="#contacto" class="btn btn--ghost">Hablemos</a>
+        </div>
+        <dl class="hero-stats">
+          <div class="hero-stat">
+            <dt>Experiencia</dt>
+            <dd>6 meses</dd>
+          </div>
+          <div class="hero-stat">
+            <dt>Proyectos</dt>
+            <dd>1</dd>
+          </div>
+          <div class="hero-stat">
+            <dt>Ubicación</dt>
+            <dd>Guayaquil</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ===== SOBRE MÍ ===== -->
+    <section class="section" id="sobre-mi">
+      <div class="section-inner about-grid">
+        <div class="about-photo-wrap">
+            <img
+            src="resources\images\foto personal.jpeg"
+            alt="Foto de Ken Aguirre"
+            class="about-photo"
+            width="480" height="480" loading="lazy">
+        </div>
+
+        <div class="about-content">
+          <p class="section-kicker">Sobre mí</p>
+          <h2 class="section-title">Quién soy y qué hago</h2>
+
+          <p class="about-text">
+            soy un estudiante de diseño y desarrollo web, tengo experiencia en HTML, CSS y Javascript, 
+            llevo 6 meses en el programa "jóvenes creativos" que me ha guiado en este camino de aprendizaje!
+          </p>
+          <p class="about-text">
+            trabajo con pasión y dedicación, siempre buscando aprender nuevas tecnologías y mejorar mis habilidades.
+          </p>
+
+          <ul class="about-facts">
+            <li><span class="about-facts-label">Nombre</span><span> Ken Aguirre</span></li>
+            <li><span class="about-facts-label">Rol</span><span> Estudiante</span></li>
+            <li><span class="about-facts-label">Correo</span><span> kaguirrecrespin@gmail.com</span></li>
+          </ul>
+
+          <a href="https://drive.google.com/file/d/1Yo41BhDKm-Z9Ad-LSW_8Lmas9mp0vfp0/view?usp=drive_link" download>
+            Descargar CV
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---- HABILIDADES ------->
+    <section class="section section--alt" id="habilidades">
+      <div class="section-inner">
+        <p class="section-kicker">Habilidades</p>
+        <h2 class="section-title">Con qué trabajo</h2>
+
+        <ul class="skills-grid" id="skillsGrid">
+          <li class="skill-card" data-percent="60">
+            <div class="skill-head">
+              <span class="skill-name">HTML5</span>
+              <span class="skill-percent">60%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-bar-fill"></div></div>
+          </li>
+
+          <li class="skill-card" data-percent="50">
+            <div class="skill-head">
+              <span class="skill-name">CSS3 / Sass</span>
+              <span class="skill-percent">50%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-bar-fill"></div></div>
+          </li>
+
+          <li class="skill-card" data-percent="55">
+            <div class="skill-head">
+              <span class="skill-name">JavaScript</span>
+              <span class="skill-percent">55%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-bar-fill"></div></div>
+          </li>
+
+          <li class="skill-card" data-percent="60">
+            <div class="skill-head">
+              <span class="skill-name">Git / GitHub</span>
+              <span class="skill-percent">60%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-bar-fill"></div></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== PROYECTOS ===== -->
+    <section class="section" id="proyectos">
+      <div class="section-inner">
+        <p class="section-kicker">Proyectos</p>
+        <h2 class="section-title">Trabajo reciente</h2>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-media" aria-hidden="true">
+              <span class="project-index">01</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">fib studio</h3>
+              <p class="project-desc">
+                fib studio es un proyecto que diseñe a partir de una idea de emprendimiento, se enfoca 
+                en la fotografia con intención y sentimiento.
+              </p>
+              <ul class="project-tags">
+                <li>HTML</li><li>CSS</li><li>JavaScript</li>
+              </ul>
+              <a href="https://fibstudio.netlify.app/" target="_blank" rel="noopener noreferrer">Ver proyecto →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACTO ===== -->
+    <section class="section section--dark" id="contacto">
+      <div class="section-inner contact-grid">
+        <div class="contact-info">
+          <p class="section-kicker section-kicker--light">Contacto</p>
+          <h2 class="section-title section-title--light">puedes contactarme</h2>
+          <p class="contact-lead">
+            Escríbeme por cualquiera de estos medios o usa el formulario; suelo responder en 1-2 días.
+          </p>
+
+          <ul class="contact-list">
+            <li>
+              <span class="contact-label">Email</span>
+              <a href="mailto:kaguirrecrespin@gmail.com">kaguirrecrespin@gmail.com</a>
+            </li>
+            <li>
+              <span class="contact-label">Teléfono</span>
+              <a href="tel:+593962377437">+593 96 237 7437</a>
+            </li>
+            <li>
+              <span class="contact-label">Ubicación</span>
+              <span>Guayaquil, Ecuador</span>
+            </li>
+          </ul>
+
+          <ul class="social-list">
+            <!-- TODO: reemplaza por tus enlaces reales -->
+            <li><a href="https://www.linkedin.com/in/ken-aguirre-1862073a2" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://github.com/dodiexsss" target="_blank" rel="noopener">GitHub</a></li>
+          </ul>
+        </div>
+
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-field">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" autocomplete="name" required minlength="2">
+            <span class="form-error" id="nameError" role="alert"></span>
+          </div>
+
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+            <span class="form-error" id="emailError" role="alert"></span>
+          </div>
+
+          <div class="form-field">
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" rows="5" required minlength="10"></textarea>
+            <span class="form-error" id="messageError" role="alert"></span>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--block">Enviar mensaje</button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>&copy; <span id="year"></span> Ken Aguirre. Todos los derechos reservados.</p>
+      <button class="back-to-top" id="backToTop" aria-label="Volver arriba">↑</button>
+    </div>
+  </footer>
+
+  <script src="resources\function.js"></script>
+</body>
+</html>
