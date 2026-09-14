@@ -114,7 +114,7 @@ function initContactForm() {
     fields[key].input.addEventListener('blur', () => validateField(key));
   });
 
-  form.addEventListener('submit', (event) => {
+  form.addEventListener('submit', async (event) => {
     event.preventDefault();
 
     const results = Object.keys(fields).map(validateField);
@@ -126,20 +126,38 @@ function initContactForm() {
       return;
     }
 
-    // TODO: Conecta aquí tu backend, servicio de correo (ej. Formspree,
-    // EmailJS) o endpoint propio para enviar el mensaje de verdad.
-    // Por ahora, se simula un envío exitoso:
+    const submitBtn = form.querySelector('button[type="submit"]');
+    submitBtn.disabled = true;
     status.classList.remove('is-error');
     status.textContent = 'Enviando…';
 
-    setTimeout(() => {
-      status.textContent = `¡Gracias, ${fields.name.input.value.split(' ')[0]}! Tu mensaje fue enviado.`;
-      form.reset();
-    }, 700);
+     
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' },
+      });
+ 
+      if (response.ok) {
+        status.textContent = `¡Gracias, ${fields.name.input.value.split(' ')[0]}! Tu mensaje fue enviado.`;
+        form.reset();
+      } else {
+        const data = await response.json().catch(() => null);
+        const detail = data?.errors?.map(e => e.message).join(', ');
+        status.textContent = detail || 'No se pudo enviar el mensaje. Intenta de nuevo o escríbeme directamente por correo.';
+        status.classList.add('is-error');
+      }
+    } catch (err) {
+      status.textContent = 'Hubo un problema de conexión. Intenta de nuevo en un momento.';
+      status.classList.add('is-error');
+    } finally {
+      submitBtn.disabled = false;
+    }
   });
 }
 
-/* ---------- Botón volver arriba ---------- */
+/* Botón volver arriba  */
 function initBackToTop() {
   const btn = document.getElementById('backToTop');
   btn.addEventListener('click', () => {

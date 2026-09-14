@@ -14,7 +14,7 @@
 </head>
 <body>
 
-  <!-- ===== HEADER / NAV ===== -->
+  <!--header-->
   <header class="site-header" id="inicio">
     <div class="header-inner">
       <a href="#inicio" class="logo">
@@ -41,7 +41,6 @@
 
   <main>
 
-    <!-- ===== HERO ===== -->
     <section class="hero">
       <div class="hero-inner">
         <p class="hero-eyebrow">Portafolio · 2025</p>
@@ -72,7 +71,7 @@
       </div>
     </section>
 
-    <!-- ===== SOBRE MÍ ===== -->
+    <!-- sobre mi-->
     <section class="section" id="sobre-mi">
       <div class="section-inner about-grid">
         <div class="about-photo-wrap">
@@ -108,7 +107,7 @@
       </div>
     </section>
 
-    <!-- ---- HABILIDADES ------->
+    <!--habilidades -->
     <section class="section section--alt" id="habilidades">
       <div class="section-inner">
         <p class="section-kicker">Habilidades</p>
@@ -150,7 +149,7 @@
       </div>
     </section>
 
-    <!-- ===== PROYECTOS ===== -->
+    <!--proyectos-->
     <section class="section" id="proyectos">
       <div class="section-inner">
         <p class="section-kicker">Proyectos</p>
@@ -177,7 +176,7 @@
       </div>
     </section>
 
-    <!-- ===== CONTACTO ===== -->
+    <!--contacto-->
     <section class="section section--dark" id="contacto">
       <div class="section-inner contact-grid">
         <div class="contact-info">
@@ -208,22 +207,22 @@
           </ul>
         </div>
 
-        <form class="contact-form" id="contactForm" novalidate>
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/mbgjnzdq" method="POST" novalidate>
           <div class="form-field">
-            <label for="name">Nombre</label>
-            <input type="text" id="name" name="name" autocomplete="name" required minlength="2">
+            <label for="name">nombre</label>
+            <input type="text" id="name" name="name" autocomplete="name" required minlength="2" placeholder="tu nombre">
             <span class="form-error" id="nameError" role="alert"></span>
           </div>
 
           <div class="form-field">
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" autocomplete="email" required>
+            <input type="email" id="email" name="email" autocomplete="email" required placeholder="tu@email.com">
             <span class="form-error" id="emailError" role="alert"></span>
           </div>
 
           <div class="form-field">
             <label for="message">Mensaje</label>
-            <textarea id="message" name="message" rows="5" required minlength="10"></textarea>
+            <textarea id="message" name="message" rows="5" required minlength="10" placeholder="escribe tu mensaje aqui..."></textarea>
             <span class="form-error" id="messageError" role="alert"></span>
           </div>
 
@@ -235,7 +234,7 @@
 
   </main>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="footer-inner">
       <p>&copy; <span id="year"></span> Ken Aguirre. Todos los derechos reservados.</p>

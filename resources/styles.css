@@ -356,7 +356,7 @@ input, textarea { font: inherit; }
 .project-link { font-weight: 600; color: var(--ink); }
 .project-link:hover { color: var(--accent); }
 
-
+/*contacto*/
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -378,7 +378,7 @@ input, textarea { font: inherit; }
   background: var(--paper);
   border-radius: var(--radius);
   padding: var(--space-md);
-  display: grid;
+  display: gr   id;
   gap: var(--space-sm);
 }
 .form-field { display: grid; gap: .4rem; }
@@ -387,8 +387,12 @@ input, textarea { font: inherit; }
   padding: .75em .9em;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  background: #fff;
+  background: #ffffff;
+  color:var(--ink);
   resize: vertical;
+}
+.form-field input::placeholder,.form-field textarea::placeholder {
+    color: var(--text--muted);
 }
 .form-field input:invalid:not(:placeholder-shown),
 .form-field textarea:invalid:not(:placeholder-shown) {
